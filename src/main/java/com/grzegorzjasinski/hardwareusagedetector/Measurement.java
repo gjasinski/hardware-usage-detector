@@ -1,4 +1,4 @@
-package com.grzegorzjasinski.hardwareusagedetecor;
+package com.grzegorzjasinski.hardwareusagedetector;
 
 import java.time.LocalDateTime;
 
@@ -13,6 +13,22 @@ class Measurement {
         this.memoryUsage = memoryUsage;
         this.systemCpuLoad = systemCpuLoad;
         this.swapUsage = swapUsage;
+    }
+
+    public LocalDateTime getLocalDateTime() {
+        return localDateTime;
+    }
+
+    public double getMemoryUsage() {
+        return convertBytesToGigaBytes(memoryUsage);
+    }
+
+    public double getSystemCpuLoad() {
+        return systemCpuLoad;
+    }
+
+    public double getSwapUsage() {
+        return convertBytesToGigaBytes(swapUsage);
     }
 
     @Override

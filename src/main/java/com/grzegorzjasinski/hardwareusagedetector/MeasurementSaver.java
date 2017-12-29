@@ -1,4 +1,4 @@
-package com.grzegorzjasinski.hardwareusagedetecor;
+package com.grzegorzjasinski.hardwareusagedetector;
 
 import io.reactivex.subjects.PublishSubject;
 

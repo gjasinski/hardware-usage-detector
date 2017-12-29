@@ -19,6 +19,11 @@
             <artifactId>rxjava</artifactId>
             <version>2.0.4</version>
         </dependency>
+        <dependency>
+            <groupId>io.reactivex.rxjava2</groupId>
+            <artifactId>rxjavafx</artifactId>
+            <version>2.2.2</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -32,7 +37,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.grzegorzjasinski.hardwareusagedetecor.App</mainClass>
+                            <mainClass>com.grzegorzjasinski.hardwareusagedetector.MeasurementDisplay</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -46,21 +51,6 @@
                     </execution>
                 </executions>
             </plugin>
-           <!-- <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.0.2</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.grzegorzjasinski.hardwareusagedetecor.App</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
--->
         </plugins>
     </build>
 </project>

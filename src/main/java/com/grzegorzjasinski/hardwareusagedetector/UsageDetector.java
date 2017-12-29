@@ -1,4 +1,4 @@
-package com.grzegorzjasinski.hardwareusagedetecor;
+package com.grzegorzjasinski.hardwareusagedetector;
 
 import com.sun.management.OperatingSystemMXBean;
 import io.reactivex.subjects.PublishSubject;
@@ -7,7 +7,7 @@ import java.lang.management.ManagementFactory;
 import java.time.LocalDateTime;
 
 public class UsageDetector implements Runnable {
-    private final static int MEASUREMENT_INTERVAL_IN_MS = 1000;
+    public final static int MEASUREMENT_INTERVAL_IN_MS = 500;
     private final PublishSubject<Measurement> publishSubject;
     private volatile boolean shutDown = false;
 
