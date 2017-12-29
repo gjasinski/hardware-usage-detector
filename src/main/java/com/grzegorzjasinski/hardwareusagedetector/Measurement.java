@@ -1,6 +1,7 @@
 package com.grzegorzjasinski.hardwareusagedetector;
 
 import java.time.LocalDateTime;
+import java.util.Locale;
 
 class Measurement {
     private final LocalDateTime localDateTime;
@@ -68,7 +69,7 @@ class Measurement {
     }
 
     public String toStoringFormat() {
-        return String.format("%s,%f,%f,%f", this.localDateTime, convertBytesToGigaBytes(this.memoryUsage),
+        return String.format(Locale.US, "%s,%f,%f,%f", this.localDateTime, convertBytesToGigaBytes(this.memoryUsage),
                 this.systemCpuLoad, convertBytesToGigaBytes(this.swapUsage));
     }
 }
